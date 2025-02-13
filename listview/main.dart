@@ -8,6 +8,8 @@ void main() {
   );
 }
 
+
+
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
@@ -104,6 +106,151 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
+//////////////////////////////////////////////////////////////////
+///
+/// animation
+/// 
+// class MyApp extends StatefulWidget {
+//   @override
+//   _MyAppState createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   bool _big = false;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(title: Text("AnimatedContainer")),
+//         body: Center(
+//           child: GestureDetector(
+//             onTap: () {
+//               setState(() {
+//                 _big = !_big;
+//               });
+//             },
+//             child: AnimatedContainer(
+//               duration: Duration(seconds: 1),
+//               curve: Curves.easeInOut,
+//               width: _big ? 200 : 100,
+//               height: _big ? 200 : 100,
+//               decoration: BoxDecoration(
+//                 color: _big ? Colors.blue : Colors.red,
+//                 borderRadius: BorderRadius.circular(_big ? 50 : 10),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: AnimationExample(),
+//     );
+//   }
+// }
+
+// class AnimationExample extends StatefulWidget {
+//   @override
+//   _AnimationExampleState createState() => _AnimationExampleState();
+// }
+
+// class _AnimationExampleState extends State<AnimationExample> with SingleTickerProviderStateMixin {
+//   late AnimationController _controller;
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     _controller = AnimationController(
+//       vsync: this,
+//       duration: Duration(seconds: 2),
+//     )..repeat(reverse: true);
+//   }
+
+//   @override
+//   void dispose() {
+//     _controller.dispose();
+//     super.dispose();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: Text("AnimationController")),
+//       body: Center(
+//         child: AnimatedBuilder(
+//           animation: _controller,
+//           builder: (context, child) {
+//             return Transform.scale(
+//               scale: 1 + _controller.value,
+//               child: Container(width: 100, height: 100, color: Colors.blue),
+//             );
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//////////////////////////////////////////////////////////////////
+///
+///
+///     вкладки
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: MyTabs(),
+//     );
+//   }
+// }
+
+// class MyTabs extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return DefaultTabController(
+//       length: 3, // Количество вкладок
+//       child: Scaffold(
+//         appBar: AppBar(
+//           title: Text("Вкладки в Flutter"),
+//           bottom: TabBar(
+//             tabs: [
+//               Tab(icon: Icon(Icons.home), text: "Главная"),
+//               Tab(icon: Icon(Icons.settings), text: "Настройки"),
+//               Tab(icon: Icon(Icons.person), text: "Профиль"),
+//             ],
+//           ),
+//         ),
+//         body: TabBarView(
+//           children: [
+//             Center(child: Text("Главная страница")),
+//             Center(child: Text("Настройки")),
+//             Center(child: Text("Профиль")),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// //////////////////////////////////////////////////////////////
+
+
+// gredview
+
+
+// ///////////////////////////////////////////////////////////
 
 // class HomeCount extends StatefulWidget {
 //   const HomeCount({super.key});
@@ -175,7 +322,11 @@ class _MyAppState extends State<MyApp> {
 //   }
 // }
 
+////////////////////////////////////////////////////////
+///
+///   listview
 
+// ///////////////////////////////////////////////////////
 // class HomeCount extends StatefulWidget {
 //   const HomeCount({super.key});
 
