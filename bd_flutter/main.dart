@@ -101,10 +101,19 @@ class _UserGridScreenState extends State<UserGridScreen> { // Определен
             builder: (context) { // Метод для построения диалогового окна
               return AlertDialog( // Возвращает AlertDialog
                 title: Text('Add context'), // Заголовок диалогового окна
-                content: TextField( // Поле для ввода текста
-                  onChanged: (value) { // Обработчик изменения текста
-                    // Здесь можно добавить логику для обработки ввода
-                  },
+                content: Column(
+                  children: [
+                    TextField( // Поле для ввода текста
+                      onChanged: (value) { // Обработчик изменения текста
+                        // Здесь можно добавить логику для обработки ввода
+                      },
+                    ),
+                    TextField( // Поле для ввода текста
+                      onChanged: (value) { // Обработчик изменения текста
+                        // Здесь можно добавить логику для обработки ввода
+                      },
+                    ),
+                  ],
                 ),
                 actions: [ // Список действий в диалоговом окне
                   ElevatedButton( // Кнопка для добавления данных
