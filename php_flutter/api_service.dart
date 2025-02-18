@@ -38,9 +38,7 @@ class ApiService {
   Future<void> deleteData(int id) async {
     try {
       final response = await http.delete(
-        Uri.parse(baseUrl),
-        headers: {'Content-Type': 'application/json'},
-        body: json.encode({'id': id}),
+        Uri.parse('$baseUrl?id=$id'),  // передаем id как часть URL
       );
       if (response.statusCode != 200) {
         throw Exception('Failed to delete data');
