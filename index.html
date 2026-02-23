@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта развития Flutter-разработчика</title>
+    <style>
+        :root {
+            --flutter-blue: #0175C2;
+            --flutter-navy: #02569B;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--flutter-navy);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .stage-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            padding: 25px 30px;
+            border-left: 6px solid var(--flutter-blue);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .stage-title {
+            color: var(--flutter-navy);
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stage-title span {
+            background-color: var(--flutter-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.6em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--flutter-blue);
+            font-weight: bold;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 Путь Flutter-разработчика</h1>
+    <p class="intro">Пошаговая карта изучения: от абсолютного новичка до создания профессиональных кроссплатформенных приложений.</p>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 1</span> Основы языка Dart</h2>
+        <ul>
+            <li><strong>Базовый синтаксис:</strong> Переменные, типы данных (<code>String</code>, <code>int</code>, <code>double</code>, <code>bool</code>, <code>List</code>, <code>Map</code>).</li>
+            <li><strong>Управляющие конструкции:</strong> Условия (<code>if</code>/<code>else</code>, <code>switch</code>) и циклы (<code>for</code>, <code>while</code>).</li>
+            <li><strong>Функции:</strong> Объявление, параметры (позиционные и именованные), стрелочные функции.</li>
+            <li><strong>ООП:</strong> Классы, объекты, конструкторы, наследование, полиморфизм, абстрактные классы и миксины (Mixins).</li>
+            <li><strong>Асинхронное программирование:</strong> <code>Future</code>, <code>async</code> / <code>await</code>, <code>Stream</code>.</li>
+            <li><strong>Обработка ошибок:</strong> <code>try</code>, <code>catch</code>, <code>finally</code>.</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 2</span> Погружение во Flutter и Базовый UI</h2>
+        <ul>
+            <li><strong>Настройка окружения:</strong> Установка Flutter SDK, настройка IDE, запуск эмулятора.</li>
+            <li><strong>Концепция виджетов:</strong> Разница между <code>StatelessWidget</code> и <code>StatefulWidget</code>.</li>
+            <li><strong>Базовые виджеты:</strong> <code>Text</code>, <code>Container</code>, <code>Image</code>, <code>Icon</code>, кнопки.</li>
+            <li><strong>Верстка и компоновка (Layouts):</strong> <code>Row</code>, <code>Column</code>, <code>Stack</code>, <code>ListView</code>, <code>Padding</code>, <code>Expanded</code>.</li>
+            <li><strong>Дизайн-системы:</strong> Material Design и Cupertino. Создание <code>Scaffold</code>, <code>AppBar</code>.</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 3</span> Состояние, Навигация и Жизненный цикл</h2>
+        <ul>
+            <li><strong>Жизненный цикл:</strong> Понимание методов <code>initState</code>, <code>build</code>, <code>dispose</code>.</li>
+            <li><strong>Локальное управление:</strong> Использование <code>setState()</code>.</li>
+            <li><strong>Работа с формами:</strong> Ввод текста, валидация данных, использование <code>GlobalKey</code>.</li>
+            <li><strong>Навигация:</strong> Базовая (Navigator 1.0) и продвинутая с помощью пакета <strong>GoRouter</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 4</span> Работа с сетью и локальными данными</h2>
+        <ul>
+            <li><strong>Работа с API:</strong> Пакет <code>http</code> или <code>dio</code>. GET и POST запросы.</li>
+            <li><strong>Парсинг JSON:</strong> Сериализация данных (<code>json_serializable</code>, <code>freezed</code>).</li>
+            <li><strong>Локальное хранение:</strong> Простые данные (<code>shared_preferences</code>) и базы данных (<code>sqflite</code>, <code>Hive</code> или <code>Isar</code>).</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 5</span> Архитектура и State Management</h2>
+        <ul>
+            <li><strong>Provider / Riverpod:</strong> Отличный выбор для старта. Riverpod — современная версия.</li>
+            <li><strong>BLoC:</strong> Индустриальный стандарт для крупных корпоративных приложений.</li>
+            <li><strong>GetX:</strong> Простой, но часто критикуется в Enterprise-разработке.</li>
+            <li><em>Рекомендация:</em> Начните с Riverpod, а затем обязательно изучите BLoC.</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 6</span> Продвинутые темы</h2>
+        <ul>
+            <li><strong>Анимации:</strong> Неявные (<code>AnimatedContainer</code>) и явные контроллеры (<code>AnimationController</code>).</li>
+            <li><strong>Адаптивный дизайн:</strong> UI для телефонов, планшетов и веба (<code>LayoutBuilder</code>, <code>MediaQuery</code>).</li>
+            <li><strong>Firebase:</strong> Аутентификация, Cloud Firestore, Push-уведомления.</li>
+            <li><strong>Интернационализация (i18n):</strong> Поддержка нескольких языков.</li>
+        </ul>
+    </div>
+
+    <div class="stage-card">
+        <h2 class="stage-title"><span>Этап 7</span> Тестирование и Релиз</h2>
+        <ul>
+            <li><strong>Тестирование:</strong> Unit-тесты (логика), Widget-тесты (UI), Integration-тесты (приложение целиком).</li>
+            <li><strong>CI/CD:</strong> Автоматизация сборки с GitHub Actions, Codemagic или Bitrise.</li>
+            <li><strong>Публикация:</strong> Сборка релизных APK/AAB для Google Play и IPA для App Store.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
